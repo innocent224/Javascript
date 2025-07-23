@@ -105,3 +105,23 @@ function getFileExtension(filename) {
 }
 
 console.log(getFileExtension("document.pdf")); // "pdf"
+
+
+
+
+
+// Assignment
+
+let email = " OKECHUKWUIKEGBUNAM7@gmail.com ";
+
+function isValidEmail(email) {
+    email = email.toLowerCase().trim();
+
+    let validation = email.include("@") &&
+            email.indexOf("@") > 0 &&
+            email.lastIndexOf("@") === emaail.indexOf("@") &&
+            email.endsWith(".com") || email.endsWith(".org");
+
+    return validation;
+
+}
