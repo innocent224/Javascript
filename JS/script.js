@@ -112,7 +112,7 @@ console.log(getFileExtension("document.pdf")); // "pdf"
 
 // Assignment
 
-let email = " OKECHUKWUIKEGBUNAM7@gmail.com ";
+ let email = " OKECHUKWUIKEGBUNAM7@gmail.com ";
 
 function isValidEmail(email) {
     email = email.toLowerCase().trim();
@@ -125,3 +125,25 @@ function isValidEmail(email) {
     return validation;
 
 }
+
+
+
+let yourEmail = "innocent@gmail.com"
+
+function isValidEmail(email) {
+  email = email.trim().toLowerCase();
+  let atIndex = email.indexOf('@');
+
+  return (
+    email.includes('@') && // contains @
+    atIndex === email.lastIndexOf('@') && // exactly one @
+    atIndex > 0 && // @ is not the first character
+    (email.endsWith('.com') || email.endsWith('.org')) && // ends with .com or .org
+    atIndex < email.length - 1 && // has content after @
+    atIndex > 1 // has content before @ (since index is 0-based)
+  );
+}
+
+let check = isValidEmail(yourEmail)
+
+console.log(check);
