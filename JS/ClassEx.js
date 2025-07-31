@@ -172,9 +172,6 @@ console.log("PASSES COURSE:", passesCourse);
 
 
 
-
-
-
 let coolUsername = "";
 let defaultName = "Guest";
 
@@ -191,3 +188,226 @@ console.log("Edit permission:", canEdit); // "User can edit content"
 let user = null;
 let userEmail = user && user.email; // Won't error if user is null
 console.log("User email:", userEmail); // null (safe)
+
+
+
+// Function declaration - teaching JavaScript a new "recipe"
+function sayHello() {
+    console.log("Hello, welcome to JavaScript functions!");
+    console.log("Functions make code reusable and organized.");
+}
+
+// Function call - asking JavaScript to follow the recipe
+sayHello();
+
+
+function lineBreakHelper() {
+    console.log("\n".repeat(10));
+}
+
+
+lineBreakHelper()
+
+
+function displayWelcomeMessage() {
+    console.log("=================================");
+    console.log("🎉 Welcome to Our Application! 🎉");
+    console.log("=================================");
+    console.log("Please follow the instructions below:");
+    console.log("");
+}
+
+// Now we can use this formatted welcome anywhere
+displayWelcomeMessage(); // At the start of the program
+console.log("User logged in successfully.");
+displayWelcomeMessage(); // After login
+console.log("Loading user dashboard...");
+displayWelcomeMessage(); // On dashboard load
+
+
+lineBreakHelper()
+
+function displayHeader() {
+    console.log("╔════════════════════════════════╗");
+    console.log("║     STUDENT GRADE SYSTEM       ║");
+    console.log("╚════════════════════════════════╝");
+}
+
+function displayMenu() {
+    console.log("\nAvailable Options:");
+    console.log("1. Calculate Grade");
+    console.log("2. View Grade History");
+    console.log("3. Update Student Info");
+    console.log("4. Exit Program");
+}
+
+function displayFooter() {
+    console.log("\n" + "=".repeat(35));
+    console.log("Thank you for using our system!");
+    console.log("© 2025 Student Management System");
+}
+
+// Main program
+displayHeader();
+displayMenu();
+displayFooter();
+
+
+lineBreakHelper()
+
+
+
+
+
+// Function without parameters - always does the same thing
+function sayHelloToJohn() {
+    console.log("Hello, John!");
+}
+
+// Function with parameter - can greet anyone
+function sayHello(name) {
+    console.log("Hello, " + name + "!");
+}
+
+// Using the flexible function
+sayHelloToJohn(); // Always says "Hello, John!"
+
+sayHello("Sarah");    // "Hello, Sarah!"
+sayHello("Michael");  // "Hello, Michael!"
+sayHello("Dr. Smith"); // "Hello, Dr. Smith!"
+
+lineBreakHelper()
+
+
+
+
+
+function calculateGrade(assignment1, assignment2, assignment3) {
+    let total = assignment1 + assignment2 + assignment3;
+    let average = total / 3;
+    
+    console.log("Grades entered:", assignment1, assignment2, assignment3);
+    console.log("Total points:", total);
+    console.log("Average:", average.toFixed(1));
+
+    
+    // Determine letter grade
+    if (average >= 90) {
+        console.log("Letter Grade: A");
+    } else if (average >= 80) {
+        console.log("Letter Grade: B");
+    } else if (average >= 70) {
+        console.log("Letter Grade: C");
+    } else if (average >= 60) {
+        console.log("Letter Grade: D");
+    } else {
+        console.log("Letter Grade: F");
+    }
+}
+
+// Using the function with different students' grades
+calculateGrade(95, 87, 92);  // Student 1
+calculateGrade(78, 82, 85);  // Student 2
+calculateGrade(65, 58, 72);  // Student 3
+
+
+
+
+
+lineBreakHelper();
+
+
+function generateEmailSignature(name, title, department, phone, email) {
+    let signature = `
+──────────────────────────────
+${name}
+${title}
+${department}
+📞 ${phone}
+📧 ${email}
+──────────────────────────────
+    `;
+    
+    console.log(signature);
+}
+
+generateEmailSignature(
+    "Dr. Sarah Mitchell",
+    "Professor of Computer Science", 
+    "Technology Department",
+    "555-123-4567",
+    "s.mitchell@university.edu"
+);
+
+
+lineBreakHelper()
+
+// Function that returns a value
+function addNumbers(num1, num2) {
+    let sum = num1 + num2;
+    return sum; // Send the result back to whoever called this function
+}
+
+// Using the returned value
+let result = addNumbers(15, 27);
+console.log("The sum is:", result); // 42
+
+// You can use the returned value in other calculations
+let doubleResult = addNumbers(10, 5) * 2;
+console.log("Double the sum:", doubleResult); // 30
+
+// Or in other functions
+function addThreeNumbers(a, b, c) {
+    let firstSum = addNumbers(a, b);
+    let finalSum = addNumbers(firstSum, c);
+    return finalSum;
+}
+
+let bigSum = addThreeNumbers(10, 20, 30);
+console.log("Sum of three numbers:", bigSum); // 60
+
+
+lineBreakHelper();
+
+
+
+// Grade calculator that returns the average
+function calculateAverage(grade1, grade2, grade3) {
+    let total = grade1 + grade2 + grade3;
+    let average = total / 3;
+    return average;
+}
+
+// Letter grade function that uses the average
+function getLetterGrade(numericGrade) {
+    if (numericGrade >= 90) return "A";
+    if (numericGrade >= 80) return "B";
+    if (numericGrade >= 70) return "C";
+    if (numericGrade >= 60) return "D";
+    return "F";
+}
+
+const grades = [85, 92, 78];
+
+grades[0]
+
+// String formatter that returns formatted text
+function formatStudentReport(name, grades) {
+    let average = calculateAverage(grades[0], grades[1], grades[2]);
+    let letterGrade = getLetterGrade(average);
+    
+    return `Student: ${name}
+Grades: ${grades.join(", ")}
+Average: ${average.toFixed(1)}
+Letter Grade: ${letterGrade}`;
+}
+
+// Using all functions together
+let student1Average = calculateAverage(85, 92, 78);
+let student1Letter = getLetterGrade(student1Average);
+let student1Report = formatStudentReport("Alex Rodriguez", [85, 92, 78]);
+
+console.log("Average:", student1Average.toFixed(1));
+console.log("Letter Grade:", student1Letter);
+console.log("\nComplete Report:");
+console.log(student1Report);
