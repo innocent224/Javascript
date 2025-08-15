@@ -613,6 +613,7 @@ input.addEventListener('input', function() {
 
 
 
+
 // Select elements
 const profileName = document.getElementById('profile-name');
 const profileBio = document.getElementById('profile-bio');
