@@ -6,6 +6,81 @@
     <title>Javascript</title>
 </head>
 <body>
+    <!-- HTML Setup for examples -->
+    <h1 id="main-title">Welcome to My Website</h1>
+    <p id="intro-text">This is an introduction paragraph.</p>
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <button id="click-me-btn">Click Me!</button>
+
+
+    <!-- HTML Setup -->
+    <div class="container">
+        <h2 class="section-title">Products</h2>
+        <p class="description">Check out our amazing products:</p>
+        <div class="product-card">
+            <h3>Laptop</h3>
+            <p class="price">$999</p>
+        </div>
+        <div class="product-card">
+            <h3>Phone</h3>
+            <p class="price">$599</p>
+        </div>
+    </div>
+
+    <!-- HTML Setup -->
+    <h1 id="page-title">Original Title</h1>
+    <p id="description">
+        This is the <strong>original</strong> description.
+    </p>
+    <div id="output"></div>
+
+    <!-- HTML Setup -->
+    <form id="user-form">
+        <input type="text" id="username" placeholder="Enter your username" value="john_doe">
+        <input type="email" id="email" placeholder="Enter your email">
+        <select id="country">
+            <option value="">Select Country</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+        </select>
+        <textarea id="message" placeholder="Your message here"></textarea>
+        <button type="button" id="submit-btn">Submit</button>
+    </form>
+    <div id="form-output"></div>
+
+    <!-- HTML Setup -->
+<div id="style-demo" class="demo-box">
+    This is a demo box for styling
+</div>
+<button id="style-btn-1">Make it Red</button>
+<button id="style-btn-2">Make it Big</button>
+<button id="style-btn-3">Toggle Visibility</button>
+<button id="reset-style">Reset Styles</button>
+
+<!-- HTML Setup -->
+<div id="class-demo" class="box">
+    Class Demo Element
+</div>
+<div class="controls">
+    <button id="add-class">Add Highlight</button>
+    <button id="remove-class">Remove Highlight</button>
+    <button id="toggle-class">Toggle Active</button>
+    <button id="check-class">Check Classes</button>
+</div>
+<div id="class-info"></div>
+
+<div id="profile-card" class="profile-card">
+    <img id="profile-image" src="default-avatar.png" alt="Profile picture">
+    <h2 id="profile-name">John Doe</h2>
+    <p id="profile-bio">Web Developer</p>
+    <div class="profile-controls">
+        <input type="text" id="name-input" placeholder="Enter new name">
+        <input type="text" id="bio-input" placeholder="Enter new bio">
+        <button id="update-profile">Update Profile</button>
+        <button id="toggle-theme">Toggle Theme</button>
+    </div>
+</div>
 </body>
-    <script src="JS/script.js"></script>
+    <script src="JS/DOM.js"></script>
 </html>
